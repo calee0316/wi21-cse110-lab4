@@ -31,7 +31,11 @@
     F. true, any non 0 number declared by Boolean is converted to true, so true === true returns true
 16. == checks value while === checks value and type
 17. 'How are you?' is printed because 2 is converted to a Boolean value in the else if block, making it true. 
+
+
 19. [6, 8,10] is returned. For every value in the array (1,2,3), we call the callback doSomething with input current value in array, and callback function that returns x*2. So we go to the callback doSomething first, which adds 2 to the input, and calls callback with that new number as input. The callback of doSomething multiplies the new number by 2 and then returns, so we are back to modifyArray. newArr then has this new number we created pushed to it. So for example, when array[i] = 1, 1 and the function that multiplies 2 to x is input to doSomething, which returns callback(1+2), which will call function(x){return x*2}, giving us a new number of 3*2, then we are back to modifyArray and 6 is pushed to newArr. This repeats.
+
+
 21. 1 is output, then 4, then 3, then 2. This is because we start by printing 1, then the setTimeout functions set timeout times. Although the timeout for 3 is 0, it must wait for the next event cycle, so console.log(4) happens first, then 3 is printed, then 2, as it must wait 1000 milliseconds in order to print.
 
     
