@@ -7,8 +7,8 @@
 7. The value in finalPrice will be printed, it was declared with let in the same block as the console.log statement, so it is in the correct scope.
 8. [50,100,150], for the same reason as question4, as nothing in terms of errors or functionality has changed. 
 9. Error, i is declared with let in the for loop, so outside of the for loop it is out of scope. An error will be occur before reaching line 11 as well, in trying to re-set a const variable. 
-10. We will not reach line 12, errors in trying to re-set a const variable will cause an error.
-11. We will not reach line 13, errors in trying to re-set a const variable will cause an error.
+10. Assuming all previous statements work, line 12 will also cause an error as discountedPrice is declared with a const, making it block-scoped, so it is out of scope outside of the for loop.
+11. Assuming all previous statements work, line 13 will print finalPrice as const is block scoped and the console.log statement is in the same scope as the definition const finalPrice = 0.
 12. The function will return an error, as we are trying to re-set a const variable in finalPrice and discounted.
 13. A. student.name
     B. student['Grad Year']
@@ -31,7 +31,7 @@
     F. true, any non 0 number declared by Boolean is converted to true, so true === true returns true
 16. == checks value while === checks value and type
 17. 'How are you?' is printed because 2 is converted to a Boolean value in the else if block, making it true. 
-19. [6, 8,10] is returned. For every value in the array (1,2,3), we call the callback doSomething with input current value in array, and callback function that returns x*2. So we go to the callback doSomething first, which adds 2 to the input, and calls callback with that new number as input. The callback of doSomething multiplies the new number by 2 and then returns, so we are back to modifyArray. newArr then has this new number we created pushed to it. So for example, when array[i] = 1, 1 and the function that multiplies 2 to x is input to doSomething, which returns callback(1+2), which will call function(x){return x*2}, giving us a new number of 3*2, then we are back to modifyArray and 6 is pushed to newArr. This repeats.
-21. An error is output as i was never defined.
+18. [6, 8,10] is returned. For every value in the array (1,2,3), we call the callback doSomething with input current value in array, and callback function that returns x*2. So we go to the callback doSomething first, which adds 2 to the input, and calls callback with that new number as input. The callback of doSomething multiplies the new number by 2 and then returns, so we are back to modifyArray. newArr then has this new number we created pushed to it. So for example, when array[i] = 1, 1 and the function that multiplies 2 to x is input to doSomething, which returns callback(1+2), which will call function(x){return x*2}, giving us a new number of 3*2, then we are back to modifyArray and 6 is pushed to newArr. This repeats.
+19. An error is output as i was never defined.
 
     
